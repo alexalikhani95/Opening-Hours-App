@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { TimePickersContainer, TimePickerBox } from "../styles/styles";
 
 const TimePickers = ({ weekDay }) => {
   const [open, setOpen] = React.useState(null);
@@ -19,16 +20,8 @@ const TimePickers = ({ weekDay }) => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Box
-        sx={{
-          marginTop: 10,
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-          border: "1px solid grey",
-          padding: 3,
-          borderRadius: 1,
-        }}
+      <TimePickersContainer
+        style={{ display: "flex", justifyContent: !checked ? "flex-start" : "space-evenly" }}
       >
         <FormGroup>
           <FormControlLabel
@@ -37,7 +30,7 @@ const TimePickers = ({ weekDay }) => {
           />
         </FormGroup>
         {checked && (
-          <Box>
+          <TimePickerBox>
             <TimePicker
               label="Open"
               value={open}
@@ -46,7 +39,7 @@ const TimePickers = ({ weekDay }) => {
               }}
               renderInput={(params) => <TextField {...params} />}
             />
-          </Box>
+          </TimePickerBox>
         )}
 
         {checked && (
@@ -61,7 +54,7 @@ const TimePickers = ({ weekDay }) => {
             />
           </Box>
         )}
-      </Box>
+      </TimePickersContainer>
     </LocalizationProvider>
   );
 };

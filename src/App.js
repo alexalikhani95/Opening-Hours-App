@@ -1,13 +1,12 @@
-import * as React from 'react';
-import { Container} from '@mui/material';
-import TimePickersList from './components/TimePickersList';
+import { AppContainer } from "./styles/styles";
+import TimePickersList from "./components/TimePickersList";
 
 const App = () => {
   return (
-    <Container>
+    <AppContainer>
       <TimePickersList />
-    </Container>
+    </AppContainer>
   );
-}
+};
 
 export default App;
