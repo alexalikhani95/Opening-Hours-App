@@ -1,10 +1,12 @@
-import './App.css';
+import * as React from 'react';
+import { Container} from '@mui/material';
+import TimePickersList from './components/TimePickersList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Opening hours app</h1>
-    </div>
+    <Container>
+      <TimePickersList />
+    </Container>
   );
 }
 
