@@ -5,6 +5,12 @@ export const AppContainer = styled(Container)(() => ({
   padding: '10px 0'
 }));
 
+export const WelcomeTextContainer = styled(Box)(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+}));
+
 export const TimePickersContainer = styled(Container)(() => ({
   marginTop: 10,
   flexWrap: "wrap",
