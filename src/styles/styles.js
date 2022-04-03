@@ -2,7 +2,8 @@ import { styled } from "@material-ui/core/styles";
 import { Box, Container } from "@mui/material";
 
 export const AppContainer = styled(Container)(() => ({
-  padding: '10px 0'
+  padding: '20px',
+  backgroundColor: 'lightpink'
 }));
 
 export const WelcomeTextContainer = styled(Box)(() => ({
@@ -25,6 +26,7 @@ export const TimePickersContainer = styled(Container)(() => ({
 }));
 
 export const TimePickersListContainer = styled(Container)(() => ({
+  backgroundColor: 'white',
   paddingTop: '10px'
 }));
 
